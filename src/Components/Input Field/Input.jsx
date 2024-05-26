@@ -8,7 +8,7 @@ const Input = () => {
   return (
     <div className="main-bottom">
       <div className="search-box">
-        <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder="Enter a promt here..." />
+        <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder="Enter a prompt here..." />
         <div>
           <VoiceInput/>
           {input ? <i class="fa-solid fa-circle-down fa-rotate-270 icon" onClick={() => onSent()} src={assets.send_icon}></i>: null}
