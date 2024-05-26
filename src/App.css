@@ -1,0 +1,16 @@
+.dark_theme {
+  --Main_body: #181819;
+  --card_color: #242526;
+  --text_color: #e3e3e3;
+  --input_color: #242526;
+  --hover_color: #333537;
+}
+
+.light_theme {
+    --Main_body: #ffffff;
+    --card_color: #dde3ea;
+    --input_color: #e9eef6;
+    --text_color: #1f1f1f;
+    --hover_color: #f3f4f7;;
+}
+
