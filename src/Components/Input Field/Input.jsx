@@ -8,16 +8,12 @@ const Input = () => {
   return (
     <div className="main-bottom">
       <div className="search-box">
-<<<<<<< HEAD
         <input
           onChange={(e) => setInput(e.target.value)}
           value={input}
           type="text"
           placeholder="Enter a prompt here..."
         />
-=======
-        <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder="Enter a prompt here..." />
->>>>>>> f90f6206a24b0864617534c994781e2edfcd7343
         <div>
           <VoiceInput />
           {input ? (
