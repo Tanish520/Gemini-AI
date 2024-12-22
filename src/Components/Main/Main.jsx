@@ -15,25 +15,26 @@ const Main = () => {
     setInput,
     input,
     isAuthenticated,
-    user
+    user,
+    newChat,
   } = useContext(context);
 
   const cardData = [
     {
       text: "Suggest beautiful places to see on an upcoming road trip.",
-      img: <img src={assets.compass_icon}/>,
+      img: <img src={assets.compass_icon} />,
     },
     {
       text: "Briefly summarize this concept: urban planning.",
-      img: <img src={assets.bulb_icon}/>,
+      img: <img src={assets.bulb_icon} />,
     },
     {
       text: "Brainstorm team bonding activities for our work retreat.",
-      img: <img src={assets.menu_icon}/>,
+      img: <img src={assets.menu_icon} />,
     },
     {
       text: "Tell me about React js and React native.",
-      img: <img src={assets.code_icon}/>,
+      img: <img src={assets.code_icon} />,
     },
   ];
 
@@ -41,7 +42,9 @@ const Main = () => {
     <>
       <div className="main">
         <div className="nav">
-          <p>Gemini</p>
+          <p style={{ cursor: "pointer" }} onClick={() => newChat()}>
+            Gemini
+          </p>
           <User></User>
         </div>
         <div className="main-container">
@@ -57,9 +60,7 @@ const Main = () => {
                 {cardData.map((item, index) => {
                   return (
                     <div className="card" onClick={() => onSent(item.text)}>
-                      <p>
-                        {item.text}
-                      </p>
+                      <p>{item.text}</p>
                       {item.img}
                     </div>
                   );
@@ -69,7 +70,10 @@ const Main = () => {
           ) : (
             <div className="result">
               <div className="result-title">
-                <img src={isAuthenticated ? user.picture : assets.user_icon} alt="" />
+                <img
+                  src={isAuthenticated ? user.picture : assets.user_icon}
+                  alt=""
+                />
                 <p>{recentPrompt}</p>
               </div>
               <div className="result-data">

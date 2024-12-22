@@ -16,13 +16,13 @@ const ContextProvider = (props) => {
     const delayPara = (index, nextWord) => {
         setTimeout(function() {
             setResultData(prev => prev + nextWord);
-        },75*index)
+        },75*index);
     }
     const newChat = () => {
         setLoading(false);
         setShowResult(false);
     }
-    const onSent = async (prompt) => {
+    const onSent = async(prompt) => {
         setResultData("");
         setLoading(true);
         setShowResult(true);
